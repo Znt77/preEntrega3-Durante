@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - zComputación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <img src="./img/zpc-logo.png" alt="" class="w-50"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Nuestros productos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pages/hardware.html">Hardware</a></li>
+                                <li><a class="dropdown-item" href="./pages/software.html">Software</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/nuestros-servicios.html">¡Pedí un técnico!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contáctanos</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
+                        <button class="btn btn__navbar--search" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/hw-carrousel-index.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="carousel__text--titulo">¿Por qué elegir zComputación?</h5>
+                        <p class="carousel__text--desc">En zComputación te brindamos toda la ayuda que necesitas en
+                            informática, desde lo más básico hasta lo más avanzado.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/hw-carrousel-index-2.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="carousel__text--titulo">¿Cuál es la diferencia entre zComputación y otras empresas?
+                        </h5>
+                        <p class="carousel__text--desc">En zComputación la revisión de tu PC y presupuestos son
+                            gratuitos, sólamente acércala a nuestro local y coméntanos qué sucede. Un experto tendrá la
+                            solución a tu problema en menos de 72hs hábiles.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/hw-carrousel-index-3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="carousel__text--titulo">¡Chatea con nosotros!</h5>
+                        <p class="carousel__text--desc">Resolveremos tus dudas y te aconsejaremos qué hacer desde las
+                            8:00 hasta las 20:00 de lunes a sábado sin cargo.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="container-fluid container__padding--top">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h2 class="text-center titulo__importante--sobre">Sobre nosotros</h2>
+                    <p>En zComputación, nos apasiona todo lo relacionado con la tecnología y nos enorgullece ofrecer una
+                        amplia gama de productos y servicios para satisfacer todas tus necesidades informáticas. Ya sea
+                        que estés buscando mejorar tu hardware, encontrar el software perfecto o necesites ayuda con la
+                        reparación de tu computadora, estamos aquí para ayudarte.</p>
+                    <ul class="ul__sobrenos">
+                        <li class="ul__sobrenos--item">Nuestro objetivo es proporcionarte la mejor experiencia de compra
+                            posible y brindarte soluciones confiables y de calidad. Contamos con un equipo de expertos
+                            en tecnología que están siempre dispuestos a asesorarte y ayudarte a encontrar los productos
+                            y servicios adecuados para ti.</li>
+
+                        <li class="ul__sobrenos--item">En cuanto a hardware, ofrecemos una amplia selección de
+                            componentes de alta calidad para que puedas construir o mejorar tu propia computadora. Ya
+                            sea que necesites una nueva tarjeta gráfica para disfrutar de los últimos juegos o un
+                            procesador más potente para tareas exigentes, tenemos todo lo que necesitas para que tu
+                            máquina funcione al máximo rendimiento.</li>
+
+                        <li class="ul__sobrenos--item">En cuanto al software, trabajamos con los principales
+                            desarrolladores y ofrecemos una variedad de programas y sistemas operativos para satisfacer
+                            tus necesidades específicas. Ya sea que necesites software de diseño, edición de video,
+                            programas de productividad o simplemente un sistema operativo actualizado, tenemos las
+                            opciones perfectas para ti.</li>
+
+                        <li class="ul__sobrenos--item">Entendemos que las computadoras pueden presentar problemas y
+                            contratiempos en cualquier momento. Es por eso que ofrecemos servicios de reparación
+                            confiables y eficientes. Nuestro equipo de técnicos capacitados está listo para solucionar
+                            cualquier problema que puedas tener, desde reparaciones de hardware hasta eliminación de
+                            virus y recuperación de datos. Tu satisfacción es nuestra prioridad y nos esforzamos por
+                            brindarte un servicio rápido y confiable.</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2 class="text-center titulo__importante--encuentranos">¡Encuéntranos!</h2>
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.86793201675!2d-60.645721787936104!3d-32.95449607217639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab11d528b38d%3A0xce854940e3f7e114!2sEntre%20R%C3%ADos%20%26%20Zeballos%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1682300735911!5m2!1ses!2sar"
+                            frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <!-- ===============NAVBAR BOTTOM=============== -->
+    <footer class="text-bg-dark p-3 footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <ul class="lista-centrada">
+                        <li>
+                            <h3 class="footer__title--zpc">zComputación</h3>
+                        </li>
+                        <li class="footer__item--index escalar">
+                            <a class="footer__btn--nav" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="footer__item--index escalar">
+                            <a class="footer__btn--nav" href="./pages/hardware.html">Hardware</a>
+                        </li>
+                        <li class="footer__item--index escalar">
+                            <a class="footer__btn--nav" href="./pages/software.html">Software</a>
+                        </li>
+                        <li class="footer__item--index escalar">
+                            <a class="footer__btn--nav" href="./pages/nuestros-servicios.html">¡Pedí un técnico!</a>
+                        </li>
+                        <li class="footer__item--index escalar">
+                            <a class="footer__btn--nav" href="./pages/contacto.html">Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <ul class="lista-centrada">
+                        <li>
+                            <h3 class="footer__title--seguinos">Seguinos en nuestras redes</h3>
+                        </li>
+                        <li class="footer__item--redes escalar"><a href="#" class="footer__btn--fb"><i
+                                    class="bi bi-facebook"></i> Facebook</a></li>
+                        <li class="footer__item--redes escalar"><a href="#" class="footer__btn--ig"><i
+                                    class="bi bi-instagram"></i> Instagram</a></li>
+                        <li class="footer__item--redes escalar"><a href="#" class="footer__btn--tiktok"><i
+                                    class="bi bi-tiktok"></i> TikTok</a></li>
+                        <li class="footer__item--redes escalar"><a href="#" class="footer__btn--wsp"><i
+                                    class="bi bi-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="footer__title--subscribe">Recibe novedades de nuestros productos!</h3>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Dirección de Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="tunombre@email.com">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

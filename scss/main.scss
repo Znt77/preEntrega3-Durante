@@ -1,0 +1,264 @@
+@mixin btn-estilizado {
+    @keyframes circle-in-center {
+        from {
+            clip-path: circle(0%);
+        }
+
+        to {
+            clip-path: circle(125%);
+        }
+    }
+}
+
+@mixin btn {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@mixin ul-centrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+$custom-fonts-path: "../fonts/";
+
+@font-face {
+    font-family: 'peace-sans';
+    src: url('../fonts/peace-sans.otf');
+}
+
+@font-face {
+    font-family: 'megapunch';
+    src: url('../fonts/megapunch.ttf');
+}
+
+@font-face {
+    font-family: 'all-things-must-pass';
+    src: url('../fonts/all-things-must-pass.ttf');
+}
+
+.carousel__text {
+    &--titulo {
+        color: rgb(182, 182, 182);
+        font-size: 2rem;
+    }
+
+    &--desc {
+        color: white;
+    }
+}
+
+.container__background {
+    &index1 {
+        background-color: red;
+    }
+}
+
+.ul__sobrenos {
+    padding-top: 15px;
+
+    &--item {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+.container {
+    &__padding {
+        &--top {
+            padding-top: 30px;
+        }
+    }
+}
+
+.formulario {
+    &__servicios {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &--item {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+}
+
+
+.btn {
+    &__navbar {
+        &--search {
+            --bs-btn-color: #207ce6;
+            --bs-btn-border-color: #207ce6;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #207ce6;
+            --bs-btn-hover-border-color: #207ce6;
+            --bs-btn-focus-shadow-rgb: 25, 135, 84;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #207ce6;
+            --bs-btn-active-border-color: #207ce6;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #207ce6;
+            --bs-btn-disabled-bg: transparent;
+            --bs-btn-disabled-border-color: #207ce6;
+            --bs-gradient: none;
+        }
+    }
+}
+
+.header {
+    margin-bottom: 15px;
+}
+
+.footer {
+    margin-top: 20px;
+
+    &__item {
+        &--index {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+
+        &--redes {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            list-style-type: none;
+        }
+    }
+
+    &__btn {
+        &--fb {
+            background-color: #207ce6;
+            @include btn;
+        }
+
+        &--ig {
+            background-color: #dd2a7b;
+            @include btn;
+        }
+
+        &--tiktok {
+            background-color: black;
+            @include btn;
+        }
+
+        &--wsp {
+            background-color: rgb(68, 206, 68);
+            @include btn;
+        }
+
+        &--nav {
+            background-color: #207ce6;
+            @include btn;
+        }
+    }
+}
+
+.lista-centrada {
+    @include ul-centrada;
+}
+
+.filtro {
+    background-image: url(../img/formato-historia-z.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    &__btn {
+        &--mices {
+            background-color: #2B59C3;
+            @include btn;
+        }
+
+        &--keyboards {
+            background-color: #253C78;
+            @include btn;
+        }
+
+        &--vcards {
+            background-color: #E2B6CF;
+            @include btn;
+        }
+
+        &--headphones {
+            background-color: #E396DF;
+            @include btn;
+        }
+
+        &--mic {
+            background-color: #E365C1;
+            @include btn;
+        }
+
+        &--programas {
+            background-color: #EAC435;
+            @include btn;
+        }
+
+        &--linux {
+            background-color: #e65f20;
+            @include btn;
+        }
+
+        &--windows {
+            background-color: #61abff;
+            @include btn;
+        }
+    }
+}
+
+.escalar {
+    &:hover {
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: ease;
+        transform: scale(1.05);
+    }
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+
+    & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.titulo {
+    &__importante {
+        &--hardware {
+            font-family: 'peace-sans';
+        }
+
+        &--software {
+            font-family: 'peace-sans';
+        }
+
+        &--sobre {
+            font-family: 'peace-sans';
+        }
+
+        &--encuentranos {
+            font-family: 'peace-sans';
+        }
+    }
+}
