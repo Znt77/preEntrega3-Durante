@@ -1,6 +1,9 @@
 const productList = [];
 
-const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+const carrito = {
+    productos: [],
+    total: 0,
+};
 
 const contenedor = document.querySelector(".productos .row");
 console.log(contenedor);
@@ -8,31 +11,41 @@ console.log(contenedor);
 function mostrarProductos() {
     contenedor.innerHTML = '';
 
-    productList.forEach( p => {
+    productList.forEach(p => {
         const div = document.createElement("div");
         div.classList.add("col");
 
         div.innerHTML = `
-            <div class="card shadow-sm text-bg-dark">
-                <img src="${p.image}" class="escalar">
-                <div class="card-body">
-                    <h5 class="card-title">${p.nombre}</h5>
-                    <p class="card-text">$ ${p.precio}</p>
-                    <div class="d-flex justify-content-between align-items-center" id="contenedor-${p.id}">
-                        <div class="btn-group">
-                            <button class="btn btn-primary">Detalles</button>
-                        </div>
-                    </div>
-                </div>
+    <div class="card shadow-sm text-bg-dark">
+        <img src="${p.image}" class="escalar">
+        <div class="card-body">
+            <h5 class="card-title">${p.nombre}</h5>
+            <p class="card-text">$ ${p.precio}</p>
+            <div class="d-flex justify-content-between align-items-center" id="contenedor-${p.id}">
+            <div class="btn-group">
+            <button class="btn btn-primary">Detalles</button>
             </div>
-        `;
+        </div>
+        </div>
+    </div>
+    `;
         const buttonAgregar = document.createElement("button");
-        buttonAgregar.classList.add("btn","btn-success");
+        buttonAgregar.classList.add("btn", "btn-success");
         buttonAgregar.innerText = "Agregar";
 
-        buttonAgregar.addEventListener("click",()=>{
-            carrito.push(p);
+        buttonAgregar.addEventListener("click", () => {
+            carrito.productos.push(p);
+            carrito.total += p.precio;
+
             localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            Toastify({
+                text: `${p.nombre} se ha agregado al carrito`,
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "right",
+            }).showToast();
         });
 
         contenedor.appendChild(div);
@@ -44,9 +57,9 @@ function mostrarProductos() {
 
 mostrarProductos();
 
-const productForm = document.getElementById("productForm");
+const formularioProducto = document.getElementById("formularioProducto");
 
-productForm.addEventListener("submit", function(event) {
+formularioProducto.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const nombre = document.getElementById("nombre").value;
@@ -63,7 +76,7 @@ productForm.addEventListener("submit", function(event) {
         id: productList.length + 1,
         image: URL.createObjectURL(archivoImagen),
         precio: precio,
-        nombre: nombre
+        nombre: nombre,
     };
 
     productList.push(nuevoProducto);
@@ -72,5 +85,37 @@ productForm.addEventListener("submit", function(event) {
 
     mostrarProductos();
 
-    productForm.reset();
-})
+    formularioProducto.reset();
+});
+
+const mostrarCarrito = () => {
+    const carritoContenedor = document.querySelector(".carrito .row");
+    carritoContenedor.innerHTML = '';
+
+    carrito.productos.forEach((producto) => {
+        const carritoDiv = document.createElement("div");
+        carritoDiv.classList.add("col");
+
+        carritoDiv.innerHTML = `
+        <div class="card shadow-sm text-bg-dark">
+        <img src="${producto.image}" class="escalar">
+        <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">$ ${producto.precio}</p>
+        </div>
+        </div>
+    `;
+
+        carritoContenedor.appendChild(carritoDiv);
+    });
+
+    const totalDiv = document.createElement("div");
+    totalDiv.innerHTML = `<p>Total: $ ${carrito.total}</p>`;
+    carritoContenedor.appendChild(totalDiv);
+};
+
+const verCarritoButton = document.getElementById("verCarrito");
+
+verCarritoButton.addEventListener("click", () => {
+    mostrarCarrito();
+});
